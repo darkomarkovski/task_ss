@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<!-- If IE use the latest rendering engine -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Set the page to the width of the device and set the zoon level -->
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<title>QuickBetOnline</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="page-header">
+			<h1>QuickBetOnline</h1>
+		</div>
+		<!-- Trigger the modal with a button -->
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#odds_modal">Convert betting odds</button>
+
+
+		<!-- Modal -->
+		<div id="odds_modal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="odds_modal-content">
+
+					<div class="popupconvert">
+
+						<div class="dice"></div>
+
+						<div class="Layer_125"></div>
+
+						<div class="Layer_124"><p class="THANK_YOU_">Convert betting odds</p></div>
+
+						<div class="cross_btn" data-dismiss="modal"></div>
+
+						<div class="Casinos_copy_2"></div>
+
+						<div class="table-responsive inner_text">
+							<form id="odds_form">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Fractional Odds (UK)</th>
+										<th>Decimal Odds (EU)</th>
+										<th>Moneyline Odds (USA)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<input type="text" class="odds_input form-control" odds_type="uk" id="uk" maxlength="10" pattern="[0-9+\/.-]+">
+										</td>
+										<td>
+											<input type="text" class="odds_input form-control" odds_type="eu" id="eu" maxlength="10" pattern="[0-9+\/.-]+">
+										</td>
+										<td>
+											<input type="text" class="odds_input form-control" odds_type="us" id="us" maxlength="10" pattern="[0-9+\/.-]+">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							</form>
+						</div>
+						
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="javascript/script.js"></script>
+</body>
+</html>

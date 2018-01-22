@@ -1,0 +1,17 @@
+#QuickBetOnline - odds converter
+
+QuickBetOnline website uses one HTML5 page - index.hmtl, which includes the Bootstrap's CSS and JavaScript files as well as the jQuery library with CDN links.
+The page also uses custom css in "css/style.css" (image files in images/*) with classes extracted from the psd file provided and custom js file in "javascript/script.js".
+
+The modal popup for odds conversion is triggered by clicking the "Convert betting odds" button.
+The popup form has 3 inputs for uk,eu and us odd types. By entering in one of the inputs the convertor searches though the odds conversion chart (fetched and stored from DB on page load) and fills the other two fileds if match is found.
+If a match is found the input is stored in the database as a log for future analyses.
+To ensure security the inputs are validated against regex function on client side and inserted into database using bind variables.
+
+The PHP scripts used are:
+ * getdata.php - ajax call on page load for fetching the odds conversion chart from the database.
+ * saveinput.php - used to save the user input in the database.
+ * dbconfig.php - for database configuration and creating the db connection.
+
+ The database consists of two tables: odds_conversion_chart and user_input_log.
+ Database creation file is quick_bet_online.sql.
